@@ -2,8 +2,17 @@
 <html class="no-js" lang="en">
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136144516-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136144516-2');
+  </script>
   <meta charset="utf-8">
-  <title>Boilerplate</title>
+  <title>Parallax Narrative</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,51 +32,71 @@
   <![endif]-->
 
   <!-- Add your site or application content here -->
-  <nav>
-    navigation
-    <div class="container">
-      <a href="#">link</a>
-      <a href="#">link</a>
-      <a href="#">link</a>
-      <a href="#">link</a>
-    </div>
-  </nav>
-  <header>
-    <h1>header</h1>
-  </header>
-  <main>
-    <h2>title</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed totam expedita, voluptates, laborum obcaecati alias. Eum sequi reprehenderit, sed, quis et nesciunt! Quidem quas cupiditate a sunt, ex autem numquam?</p>
-    <p>Ipsa commodi explicabo nihil perspiciatis eius beatae aut sint mollitia pariatur, quibusdam, ipsam omnis ea voluptates, facilis veniam ab labore. Cumque et saepe doloremque excepturi earum, quod illum voluptatum facere.</p>
-    <p>Molestias neque maxime corporis mollitia magni dolorum veritatis ad dolores rerum repudiandae cupiditate eveniet rem aliquid nemo officia illo nulla, voluptatibus sapiente dolor totam labore, nisi consequuntur saepe soluta enim.</p>
-    <p>Molestiae sunt ad, dolorum rem, quos ea fugiat! Enim nulla, voluptatem repudiandae repellat vel explicabo architecto, odit assumenda expedita repellendus cumque illum! Rerum consectetur nam culpa, aliquam fugit ipsum explicabo!</p>
-    <p>Sapiente voluptate in rem incidunt saepe? Ipsum excepturi perspiciatis voluptatum nobis commodi quis fugiat unde harum. Recusandae nisi fugiat perferendis officiis vero reiciendis, perspiciatis debitis libero, error, cumque quis ea.</p>
-  </main>
-  <aside>
-    <h2>sidebar</h2>
-  </aside>
-  <footer>
-    <p>Created by Megan Akiba</p>
-  </footer>
+  <main class="parallax">
+    <nav>
+      <div class="container">
+        <a href="../index.html">back to portal</a>
+      </div>
+    </nav>
+    <section id="g1" class="group">
+      <div class="layer base">
+        <header>
+          <h1 class="pagetitle">what have I been up to this semester?</h1>
+        </header>
+      </div>
+    </section>
 
+    <section id="g2" class="group">
+      <div class="layer base"></div>
+      <div class="layer base2"></div>
+      <div class="layer base3"></div>
+      <p>This semester I am taking a course called photovisualization. I haven't taken any photo courses since my sophomore year at CU, so it's been really fun taking some time to photograph my friends for my semester long project. Creative photography is something that I've always wanted to work on, and it's been awesome getting to experiment with all kinds of stuff for this class! Scroll to see some of my work so far...</p>
+    </section>
+    <section id="g3" class="group">
+      <div class="layer base"></div>
+      <figure id="figone">
+        <img src="img/insta.png" alt="instalogo">
+      </figure>
+      <p id="g3text">Follow my instagram! @meganakiiba_vis</p>
+    </section>
+    <section id="g4" class="group">
+      <div class="layer base"></div>
+      <figure id="figtwo">
+        <img src="img/time.jpg" alt="angela">
+      </figure>
+    </section>
+    <section id="g5" class="group">
+      <div class="layer base"></div>
+      <figure id="figthree">
+        <img src="img/photo-2.jpg" alt="chandler">
+      </figure>
+    </section>
+    <section id="g6" class="group">
+      <div class="layer base"></div>
+      <figure id="figfour">
+        <img src="img/photo-1.jpg" alt="overlay">
+      </figure>
+      <p id="g6text">More content to come after shooting some more over spring break!</p>
+    </section>
+</main>
 
 
 <!-- when using this boilerplate, best practice is to create git repository, do compass watch in terminal -->
 
 
 
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<!--   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    ga('create', 'UA-136144516-2', 'auto'); ga('send', 'pageview')
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script> -->
 </body>
 
 </html>

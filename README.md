@@ -1,9 +1,6 @@
-# HTML5/Sass/Compass Boilerplate 
+# Parallax Narrative with Google Analytics
 
-Custom boilerplate (Built from the HTML5 Boilerplate v7, includes compass and sass functionality) created by Megan Akiba.
-
-Starter template for future projects.
-Will be updated as the course progresses.
+A narrative with parallax scrolling. Page is tracked with Google Analytics.
 
 Creative Web Development Tools
 Taught by David Schaal, Spring 2019

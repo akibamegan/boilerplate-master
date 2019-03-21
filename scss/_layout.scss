@@ -1,65 +1,225 @@
-body{
-	display: grid;
-	grid-template-columns: 200px 1fr 1fr 1fr;
-	grid-template-rows: 100px auto auto 100px;
-	grid-template-areas: 
-		"nav nav nav nav"
-		"head head head head"
-		"side main main main"
-		"foot foot foot foot";
-	color: black;
+// from creative dev parallax example
 
-	nav{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background-color: #fcb594;
-		grid-area: nav;
-		a{
-			text-decoration: none;
-			&:visited{
-				color: black;
-			}
-			&:hover{
-				color: white;
-			}
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-		}
-	}
-	header{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background-color: #a784e0;
-		grid-area: head;
-	}
-	main{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background-color: #ea4bb2;
-		grid-area: main;
-		p{
-			margin: 5%;
-		}
-	}
-	aside{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background-color: #a0efc9;
-		grid-area: side;
-	}
-	footer{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		background: white;
-		grid-area: foot;
-	}
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+.parallax {
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	perspective: 300px;
+}
+
+.layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.group {
+	position: relative;
+	padding: 25ch 10%;
+	min-height: 100vh;
+	width: 100vw;
+	transform-style: inherit;
+	background: 50% 50% / cover;
+	transition: transform 0.5s;
+}
+
+.group:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: 50% 50% / cover;
+}
+
+
+.base {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0) scale(1);
+	z-index: 5;
+}
+
+.base2 {
+	-webkit-transform: translateZ(-50px) scale(1.2);
+	transform: translateZ(6px) scale(1.1);
+	z-index: 7;
+}
+
+
+#g1 {
+	z-index: 5;
+}
+
+#g1 .base {
+	// background: pink;
+	background: url('../img/bricks.jpeg') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+
+
+
+#g2 {
+	z-index: 6;
+}
+
+#g2 .base {
+	background: url('../img/glitter.jpeg') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+#g2 .base2 {
+	background: url('../img/pic1.jpg') 50% 50% no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+}
+
+
+
+#g3 {
+	z-index: 7;
+}
+
+#g3 .base {
+	background: url('../img/pic2.jpg') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+
+
+#g4 {
+	z-index: 8;
+}
+
+#g4 .base {
+	background: url('../img/pic3.jpg') 50% 50% no-repeat;
+	// background: black;
+	background-size: cover;
+}
+
+
+
+#g5 {
+	z-index: 9;
+}
+
+#g5 .base {
+	background: url('../img/pic4.jpg') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+#g6 {
+	z-index: 10;
+}
+
+#g6 .base {
+	background: url('../img/overlay2.jpg') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+.pagetitle {
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	font-size: 2.5em;
+}
+
+#g3text {
+	font-size: 25px;
+	color: white;
+	line-height: 40px;
+	padding: 20px;
+	width: 25%;
+	right: 10%;
+	bottom: 50%;
+	background: rgba(0, 10, 10, 0.4);
+	border-radius: 15px;
+	transform: translateZ(40px) scale(0.6);
+	position: absolute;
+	z-index: 999;
+}
+
+#g6text {
+	font-size: 30px;
+	color: white;
+	line-height: 40px;
+	padding: 20px;
+	width: 40%;
+	left: 20%;
+	bottom: 50%;
+	background: rgba(0, 10, 10, 0.4);
+	border-radius: 15px;
+	transform: translateZ(40px) scale(0.6);
+	position: absolute;
+	z-index: 999;
+}
+
+p {
+	font-size: 20px;
+	color: white;
+	line-height: 40px;
+	padding: 20px;
+	width: 60%;
+	right: 10%;
+	bottom: 50%;
+	background: rgba(0, 10, 10, 0.4);
+	border-radius: 15px;
+	transform: translateZ(75px) scale(0.6);
+	position: absolute;
+	z-index: 999;
+}
+
+#figone {
+	width: 12%;
+	right: 25%;
+	bottom: 40%;
+	position: absolute;
+	transform: translateZ(90px) scale(.4);
+	z-index: 999;
+}
+
+#figtwo {
+	width: 12%;
+	left: 14%;
+	bottom: 5%;
+	position: absolute;
+	transform: translateZ(40px) scale(.7);
+	z-index: 999;
+}
+
+#figthree {
+	width: 12%;
+	right: 25%;
+	bottom: 1%;
+	position: absolute;
+	transform: translateZ(40px) scale(.7);
+	z-index: 999;
+}
+
+#figfour {
+	width: 12%;
+	right: 25%;
+	bottom: 1%;
+	position: absolute;
+	transform: translateZ(40px) scale(.7);
+	z-index: 999;
 }

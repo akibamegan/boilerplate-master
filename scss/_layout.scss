@@ -1,225 +1,283 @@
-// from creative dev parallax example
-
 *,
 *:before,
 *:after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-	height: 100%;
-	overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 .parallax {
-	height: 100vh;
-	overflow-x: hidden;
-	overflow-y: auto;
-	perspective: 300px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 300px;
 }
 
 .layer {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .group {
-	position: relative;
-	padding: 25ch 10%;
-	min-height: 100vh;
-	width: 100vw;
-	transform-style: inherit;
-	background: 50% 50% / cover;
-	transition: transform 0.5s;
+  position: relative;
+  padding: 25ch 10%;
+  min-height: 100vh;
+  width: 100vw;
+  transform-style: inherit;
+  background: 50% 50% / cover;
+  transition: transform 0.5s;
 }
 
 .group:before {
-	content: " ";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: 50% 50% / cover;
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: 50% 50% / cover;
 }
 
-
 .base {
-	-webkit-transform: translateZ(0);
-	transform: translateZ(0) scale(1);
-	z-index: 5;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0) scale(1);
+  z-index: 5;
 }
 
 .base2 {
-	-webkit-transform: translateZ(-50px) scale(1.2);
-	transform: translateZ(6px) scale(1.1);
-	z-index: 7;
+  -webkit-transform: translateZ(-50px) scale(1.2);
+  transform: translateZ(6px) scale(1.1);
+  z-index: 7;
 }
 
-
 #g1 {
-	z-index: 5;
+  z-index: 5;
 }
 
 #g1 .base {
-	// background: pink;
-	background: url('../img/bricks.jpeg') 50% 50% no-repeat;
-	background-size: cover;
+  background: url("../img/bricks.jpeg") 50% 50% no-repeat;
+  background-size: cover;
 }
 
-
-
-
 #g2 {
-	z-index: 6;
+  z-index: 6;
 }
 
 #g2 .base {
-	background: url('../img/glitter.jpeg') 50% 50% no-repeat;
-	background-size: cover;
+  background: url("../img/glitter.jpeg") 50% 50% no-repeat;
+  background-size: cover;
 }
 
 #g2 .base2 {
-	background: url('../img/pic1.jpg') 50% 50% no-repeat;
-	background-size: cover;
-	opacity: 0.7;
+  background: url("../img/liz-shoes.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  opacity: 0.7;
 }
 
-
-
 #g3 {
-	z-index: 7;
+  z-index: 7;
 }
 
 #g3 .base {
-	background: url('../img/pic2.jpg') 50% 50% no-repeat;
-	background-size: cover;
+  background: url("../img/liz-green.jpg") 50% 50% no-repeat;
+  background-size: cover;
 }
 
-
-
 #g4 {
-	z-index: 8;
+  z-index: 8;
 }
 
 #g4 .base {
-	background: url('../img/pic3.jpg') 50% 50% no-repeat;
-	// background: black;
-	background-size: cover;
+  background: url("../img/chandler-3.jpg") 50% 50% no-repeat;
+  background-size: cover;
 }
 
-
-
 #g5 {
-	z-index: 9;
+  z-index: 9;
 }
 
 #g5 .base {
-	background: url('../img/pic4.jpg') 50% 50% no-repeat;
-	background-size: cover;
+  background: url("../img/angela-2.jpg") 50% 50% no-repeat;
+  background-size: cover;
 }
 
 #g6 {
-	z-index: 10;
+  z-index: 10;
 }
 
 #g6 .base {
-	background: url('../img/overlay2.jpg') 50% 50% no-repeat;
-	background-size: cover;
+  background: url("../img/overlay2.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+#g7 .base {
+  background: black;
+  background-size: cover;
+}
+
+#g8 .base {
+  background: url("../img/Marco-02.jpg") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+#g9 .base {
+  background: white;
+  background-size: cover;
+}
+
+#g10 .base {
+  background: url("../img/Chandler-1.jpg") 50% 50% no-repeat;
+  background-size: cover;
 }
 
 .pagetitle {
-	text-align: center;
-	position: absolute;
-	left: 50%;
-	top: 25%;
-	transform: translate(-50%, -50%);
-	padding: 10px;
-	font-size: 2.5em;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  font-size: 2.5em;
 }
 
 #g3text {
-	font-size: 25px;
-	color: white;
-	line-height: 40px;
-	padding: 20px;
-	width: 25%;
-	right: 10%;
-	bottom: 50%;
-	background: rgba(0, 10, 10, 0.4);
-	border-radius: 15px;
-	transform: translateZ(40px) scale(0.6);
-	position: absolute;
-	z-index: 999;
+  font-size: 25px;
+  color: white;
+  line-height: 40px;
+  padding: 20px;
+  width: 25%;
+  right: 10%;
+  bottom: 50%;
+  background: rgba(0, 10, 10, 0.4);
+  border-radius: 15px;
+  transform: translateZ(40px) scale(0.6);
+  position: absolute;
+  z-index: 999;
 }
 
-#g6text {
-	font-size: 30px;
-	color: white;
-	line-height: 40px;
-	padding: 20px;
-	width: 40%;
-	left: 20%;
-	bottom: 50%;
-	background: rgba(0, 10, 10, 0.4);
-	border-radius: 15px;
-	transform: translateZ(40px) scale(0.6);
-	position: absolute;
-	z-index: 999;
+#g10text {
+  font-size: 30px;
+  color: white;
+  line-height: 40px;
+  padding: 20px;
+  width: 40%;
+  left: 20%;
+  bottom: 50%;
+  background: rgba(0, 10, 10, 0.4);
+  border-radius: 15px;
+  transform: translateZ(40px) scale(0.6);
+  position: absolute;
+  z-index: 999;
 }
 
 p {
-	font-size: 20px;
-	color: white;
-	line-height: 40px;
-	padding: 20px;
-	width: 60%;
-	right: 10%;
-	bottom: 50%;
-	background: rgba(0, 10, 10, 0.4);
-	border-radius: 15px;
-	transform: translateZ(75px) scale(0.6);
-	position: absolute;
-	z-index: 999;
+  font-size: 20px;
+  color: white;
+  line-height: 40px;
+  padding: 20px;
+  width: 60%;
+  right: 10%;
+  bottom: 50%;
+  background: rgba(0, 10, 10, 0.4);
+  border-radius: 15px;
+  transform: translateZ(75px) scale(0.6);
+  position: absolute;
+  z-index: 999;
 }
 
 #figone {
-	width: 12%;
-	right: 25%;
-	bottom: 40%;
-	position: absolute;
-	transform: translateZ(90px) scale(.4);
-	z-index: 999;
+  width: 12%;
+  right: 25%;
+  bottom: 40%;
+  position: absolute;
+  transform: translateZ(90px) scale(0.4);
+  z-index: 999;
 }
 
 #figtwo {
-	width: 12%;
-	left: 14%;
-	bottom: 5%;
-	position: absolute;
-	transform: translateZ(40px) scale(.7);
-	z-index: 999;
+  width: 12%;
+  left: 14%;
+  bottom: 5%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 999;
 }
 
 #figthree {
-	width: 12%;
-	right: 25%;
-	bottom: 1%;
-	position: absolute;
-	transform: translateZ(40px) scale(.7);
-	z-index: 999;
+  width: 12%;
+  right: 25%;
+  bottom: 1%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 999;
 }
 
 #figfour {
-	width: 12%;
-	right: 25%;
-	bottom: 1%;
-	position: absolute;
-	transform: translateZ(40px) scale(.7);
-	z-index: 999;
+  width: 12%;
+  right: 25%;
+  bottom: 1%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 999;
+}
+
+#figfive {
+  width: 12%;
+  left: 25%;
+  bottom: 1%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 999;
+}
+
+#figsix {
+  width: 12%;
+  left: 15%;
+  bottom: 1%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 999;
+}
+#figseven {
+  width: 12%;
+  left: 8%;
+  bottom: 1%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 6;
+}
+
+#figeight {
+  width: 12%;
+  right: 20%;
+  bottom: 1%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 900;
+}
+
+#fignine {
+  width: 12%;
+  right: 50%;
+  bottom: 1%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 999;
+}
+
+#figten {
+  width: 12%;
+  right: 20%;
+  bottom: 1%;
+  position: absolute;
+  transform: translateZ(40px) scale(0.7);
+  z-index: 999;
 }
